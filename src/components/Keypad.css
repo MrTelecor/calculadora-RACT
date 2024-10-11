@@ -1,0 +1,68 @@
+/* styles/Keypad.css */
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .keypad button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .keypad button:hover {
+    background-color: #d5d5d5;
+  }
+  
+  .keypad button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Estilos para los botones de función destacados en morado */
+  .keypad button:nth-child(1), /* C */
+  .keypad button:nth-child(2), /* / */
+  .keypad button:nth-child(3), /* * */
+  .keypad button:nth-child(4), /* - */
+  .keypad button:nth-child(8), /* + */
+  .keypad button:nth-child(12), /* = */
+  .keypad button:nth-child(16) /* . */ {
+    background-color: #6a0dad;
+    color: #fff;
+  }
+  
+  .keypad button:nth-child(1):hover,
+  .keypad button:nth-child(2):hover,
+  .keypad button:nth-child(3):hover,
+  .keypad button:nth-child(4):hover,
+  .keypad button:nth-child(8):hover,
+  .keypad button:nth-child(12):hover,
+  .keypad button:nth-child(16):hover {
+    background-color: #5a0cad;
+  }
+  
+  .keypad button:last-child {
+    grid-column: span 4;
+    background-color: #e0e0e0;
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 500px) {
+    .keypad button {
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+  
+    .display {
+      font-size: 1.5rem;
+      padding: 15px;
+    }
+  }
+  
